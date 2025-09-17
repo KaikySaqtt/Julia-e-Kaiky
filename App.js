@@ -6,18 +6,18 @@ import styles from "./src/styles/AppStyles";
 
 export default function App() {
   const [name, setName] = React.useState('');
-  const [image, setImage] = React.useState(require('./assets/img/pazul.jpg'));  // Imagem padrão
+  const [image, setImage] = React.useState(require('./assets/img/mico.jpeg'));  // Imagem padrão
 
   // Função para trocar a imagem conforme o nome digitado
   function trocarImagem() {
-    if (name.toLowerCase() === 'periquito1') {
-      setImage(require('./assets/img/pazul.jpg'));
-    } else if (name.toLowerCase() === 'periquito2') {
-      setImage(require('./assets/img/pverde.jpg'));
-    } else if (name.toLowerCase() === 'periquito3') {
-      setImage(require('./assets/img/pgay.jpg'));
+    if (name.toLowerCase() === 'mico') {
+      setImage(require('./assets/img/mico.jpeg'));
+    } else if (name.toLowerCase() === 'babuino') {
+      setImage(require('./assets/img/babuino.jpg'));
+    } else if (name.toLowerCase() === 'sagui') {
+      setImage(require('./assets/img/sagui.jpg'));
     } else {
-      setImage(require('./assets/img/ptraumatizado.jpg')); 
+      setImage(require('./assets/img/macacoconfuso.jpg')); 
     }
   }
 
@@ -25,15 +25,15 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar style="light" />
 
-      <Text style={styles.title}>Periquitos queridos</Text>
-      <Image source={image} style={{ width: 200, height: 200 ,borderRadius: 15, borderWidth: 1, marginBottom: 15}} />
+      <Text style={styles.title}>Melhores macacos</Text>
+      <Image source={image} style={{ width: 300, height: 300 ,borderRadius: 15, borderWidth: 1, borderColor: '#ffffffff', marginBottom: 15}} />
 
       
 
       <TextInput
         style={styles.input}
         onChangeText={(value) => setName(value)} 
-        placeholder="Coloque o nome da imagem (periquito1, periquito2, periquito3)"
+        placeholder="Coloque o nome da imagem (Mico, babuino e sagui)"
         placeholderTextColor="#6f5c77ff"
 
       />
